@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erisco Contractor U LTD | General Contracting & Maintenance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 0.75rem;
+            position: relative;
+        }
+
+        .gallery-item img {
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .contact-btn {
+            transition: transform 0.2s active;
+        }
+
+        .contact-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-blue-700 tracking-tight">ERISCO</span>
+                    <span class="ml-2 text-sm font-medium text-slate-500 hidden sm:block uppercase tracking-widest">Contractor U Ltd</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-slate-600 hover:text-blue-700 font-medium">Home</a>
+                    <a href="#services" class="text-slate-600 hover:text-blue-700 font-medium">Services</a>
+                    <a href="#gallery" class="text-slate-600 hover:text-blue-700 font-medium transition-colors">Team in Action</a>
+                    <a href="#contact" class="bg-blue-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition">Get a Quote</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-600">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 py-4 space-y-2">
+            <a href="#home" class="block py-2 text-slate-600">Home</a>
+            <a href="#services" class="block py-2 text-slate-600">Services</a>
+            <a href="#gallery" class="block py-2 text-slate-600">Team in Action</a>
+            <a href="#contact" class="block py-2 text-blue-700 font-bold">Get a Quote</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-gradient min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                    Your Trusted Partner in General <span class="text-blue-400">Contracting & Maintenance</span>
+                </h1>
+                <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+                    From minor residential repairs to large-scale industrial projects, ERISCO CONTRACTOR U LTD delivers excellence across every square inch of your property.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#services" class="px-8 py-4 bg-blue-700 text-white rounded-lg font-bold text-lg hover:bg-blue-800 transition text-center">
+                        Explore Our Services
+                    </a>
+                    <a href="#contact" class="px-8 py-4 bg-white/10 text-white border border-white/20 backdrop-blur-sm rounded-lg font-bold text-lg hover:bg-white/20 transition text-center">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <div class="bg-white py-12 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-blue-700">100%</div>
+                    <div class="text-slate-500 text-sm">Quality Guaranteed</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-blue-700">24/7</div>
+                    <div class="text-slate-500 text-sm">Support Available</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-blue-700">500+</div>
+                    <div class="text-slate-500 text-sm">Projects Completed</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-blue-700">Reliable</div>
+                    <div class="text-slate-500 text-sm">Trusted Experts</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Our Services</h3>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Plumbing -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-faucet-drip text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Plumbing</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Industrial & Domestic solutions. Expert installation and maintenance for all systems.</p>
+                </div>
+
+                <!-- Electrical -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-bolt text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Electrical</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Full wiring, industrial maintenance, and safety inspections for all properties.</p>
+                </div>
+
+                <!-- Fire Systems -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-14 h-14 bg-red-50 text-red-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-fire-extinguisher text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Fire Systems</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Specialized Fire Hydrant Installation and emergency suppression system maintenance.</p>
+                </div>
+
+                <!-- Structure -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-14 h-14 bg-slate-100 text-slate-700 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-trowel-bricks text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Construction</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">From mansion works to structural modifications and general construction projects.</p>
+                </div>
+
+                <!-- Roofing -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-14 h-14 bg-cyan-50 text-cyan-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-house-chimney-window text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Roofing</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Professional installation and leak repairs. We cover all types of roofing materials.</p>
+                </div>
+
+                <!-- Finishing -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-paint-roller text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Finishing</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Painting, floor tiling, and expert carpentry to give your space the perfect look.</p>
+                </div>
+
+                <!-- Exterior -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-tree text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Exterior</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Custom landscaping and professional welding services for aesthetics and security.</p>
+                </div>
+
+                <!-- Maintenance -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                    <div class="w-14 h-14 bg-sky-50 text-sky-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-broom text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Maintenance</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Professional cleaning services to keep your commercial or residential space pristine.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <p class="text-slate-500 italic">...and much more! Contact us for custom specialized works.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-Column Photo Gallery Section -->
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Our Team in Action</h3>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Row 1 -->
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0014.jpg">
+                 
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0013.jpg">
+                   
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0021.jpg">
+                   
+                </div>
+                <!-- Row 2 -->
+                   
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0026.jpg">
+                 
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0028.jpg">
+                   
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0029.jpg">
+                </div>
+
+             <!-- Row 3 -->
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0030.jpg">
+                 
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0001.jpg">
+                   
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0003.jpg">
+                   
+                </div>
+                <!-- Row 4 -->
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0004.jpg">
+                 
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0005.jpg">
+                   
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0006.jpg">
+                </div>
+                   <!-- Row 5 -->
+                   <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0007.jpg">
+                 
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0016.jpg">
+                   
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0017.jpg">
+                </div>
+                  <!-- Row 6 -->
+                  <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0018.jpg">
+                 
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0020.jpg">
+                   
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0022.jpg">
+                </div>
+                 <!-- Row 7 -->
+                 <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0027.jpg">
+                 
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0031.jpg">
+                   
+                </div>
+                <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0033.jpg">
+                </div>
+                  <!-- Row 8 -->
+                  <div class="gallery-item group">
+                    <img src="IMG-20260210-WA0039.jpg">
+                </div>             
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-blue-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                <!-- Contact Info -->
+                <div class="lg:w-2/5 bg-blue-800 p-12 text-white">
+                    <h3 class="text-3xl font-bold mb-8">Get In Touch</h3>
+                    <p class="text-blue-100 mb-12">Available 24/7 for urgent repairs and project consultations.</p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mr-4 shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-sm uppercase text-blue-200 tracking-wider">Call Us</h5>
+                                <p class="text-lg">0782264305</p>
+                                <p class="text-lg">0752744721</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mr-4 shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-sm uppercase text-blue-200 tracking-wider">Email Us</h5>
+                                <p class="text-lg">wereeric1@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:w-3/5 p-12 bg-white">
+                    <h3 class="text-2xl font-bold mb-6 text-slate-900">Request a Service</h3>
+                    
+                    <!-- NOTE: To use Formspree (Email), change the <form> to:
+                         <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+                    -->
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
+                                <input type="text" id="form-name" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number</label>
+                                <input type="tel" id="form-phone" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="07XXXXXXXX">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Service Needed</label>
+                            <select id="form-service" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition">
+                                <option>Plumbing</option>
+                                <option>Electrical</option>
+                                <option>Fire Systems</option>
+                                <option>Construction</option>
+                                <option>Roofing</option>
+                                <option>Finishing/Painting</option>
+                                <option>Exterior/Landscaping</option>
+                                <option>Maintenance/Cleaning</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Message</label>
+                            <textarea id="form-message" rows="3" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="Briefly describe your request..."></textarea>
+                        </div>
+                        <button type="button" onclick="handleWhatsAppSubmit()" class="contact-btn w-full bg-blue-700 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Send via WhatsApp
+                        </button>
+                        <p class="text-xs text-slate-400 text-center">Clicking above will open WhatsApp with your details pre-filled.</p>
+                        <div id="successMessage" class="hidden text-emerald-600 font-medium text-center bg-emerald-50 p-3 rounded-lg">
+                            Redirecting to WhatsApp...
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <p class="text-slate-500 mt-4">©<script>document.write(new Date().getFullYear());</script> ERISCO CONTRACTOR U LTD. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function handleSubmit() {
+            const successMsg = document.getElementById('successMessage');
+            successMsg.classList.remove('hidden');
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+                document.getElementById('contactForm').reset();
+            }, 3000);
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                mobileMenu.classList.add('hidden');
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
