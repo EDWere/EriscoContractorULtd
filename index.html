@@ -85,7 +85,7 @@
             <a href="#home" class="block py-2 text-slate-600">Home</a>
             <a href="#services" class="block py-2 text-slate-600">Services</a>
             <a href="#gallery" class="block py-2 text-slate-600">Team in Action</a>
-            <a href="#contact" class="block py-2 text-blue-700 font-bold">Get a Quote</a>
+            <a href="#contact" class="bg-blue-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition">Get a Quote</a>
         </div>
     </nav>
 
@@ -415,6 +415,44 @@
     </footer>
 
     <script>
+        function handleWhatsAppSubmit() {
+            // 1. Get the values from the form fields
+            const name = document.getElementById('form-name').value;
+            const phone = document.getElementById('form-phone').value;
+            const service = document.getElementById('form-service').value;
+            const message = document.getElementById('form-message').value;
+        
+            // 2. Validate that required fields aren't empty
+            if (!name || !phone) {
+                alert("Please fill in your name and phone number.");
+                return;
+            }
+        
+            // 3. Set your WhatsApp number (Include country code, no + or spaces)
+            // Using 256 for Uganda based on your phone format (078...)
+            const whatsappNumber = "256782264305"; 
+        
+            // 4. Create the encoded message
+            const text = `Hello ERISCO!%0A%0A` +
+                         `*Name:* ${encodeURIComponent(name)}%0A` +
+                         `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                         `*Service:* ${encodeURIComponent(service)}%0A` +
+                         `*Message:* ${encodeURIComponent(message)}`;
+        
+            // 5. Construct the URL
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${text}`;
+        
+            // 6. Show the success message and redirect
+            const successMsg = document.getElementById('successMessage');
+            successMsg.classList.remove('hidden');
+        
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+                successMsg.classList.add('hidden');
+                document.getElementById('contactForm').reset();
+            }, 1000);
+        }
+
         const menuBtn = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         
