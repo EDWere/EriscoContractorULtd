@@ -21,6 +21,16 @@
             background-position: center;
         }
 
+        /* handles mobile specifically */
+@media (max-width: 768px) {
+    .hero-gradient {
+        /* 'contain' would show the whole image but leave white gaps, 
+           so we use '100% 100%' or adjust the height */
+        background-size: cover;
+        background-position: top center; /* Keeps the focus on the top/action part of the photo */
+        min-height: 60vh; /* Reduces height on mobile so the photo doesn't stretch so far down */
+    }
+}
         .service-card {
             transition: all 0.3s ease;
         }
